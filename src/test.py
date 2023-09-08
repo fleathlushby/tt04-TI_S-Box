@@ -13,10 +13,10 @@ async def test_ti_sbox(dut):
 
     dut._log.info("reset")
     dut.rst_n.value = 0
-    dut.ena.value = 1
+    dut.ena.value = 0
     await ClockCycles(dut.clk, 110)
     dut.rst_n.value = 1
-    dut.ena.value = 0
+    dut.ena.value = 1
     dut.ui_in.value = input[0]
     dut._log.info("output at reset low = {}".format(int(dut.uo_out.value)))
     dut._log.info("output ready = {}".format(int(dut.uio_out.value)))
@@ -37,7 +37,7 @@ async def test_ti_sbox(dut):
     dut._log.info("output during input buffering = {}".format(int(dut.uo_out.value)))
     dut._log.info("output ready = {}".format(int(dut.uio_out.value)))
     await ClockCycles(dut.clk, 20)
-    dut.ena.value = 1
+    dut.ena.value = 0
     dut._log.info("output at ena low = {}".format(int(dut.uo_out.value)))
     dut._log.info("output ready = {}".format(int(dut.uio_out.value)))
     # dut._log.info("check 5 inputs")
