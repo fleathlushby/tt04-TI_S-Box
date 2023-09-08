@@ -12,8 +12,10 @@ module tt_um_ti_sbox(
 
 wire reset = ! rst_n;
 wire in_load;
+wire [7:0] in;
 reg out_ready;
 assign in_load = ena;
+assign in = ui_in;
 assign uio_oe = 8'b11111111;   // use bidirectionals as outputs
 assign uio_out[0] = out_ready;
 assign uio_out[7:1] = 7'b0000000;
