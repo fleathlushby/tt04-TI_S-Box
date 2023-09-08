@@ -19,11 +19,6 @@ wire [7:0] uio_oe;
 wire clk;
 wire rst_n;
 wire ena;
-    
-reg[7:0] in;
-reg in_load,clk,rst;
-wire out_ready;
-wire[7:0] out;
 
 tt_um_ti_sbox tt_um_ti_sbox(
     `ifdef GL_TEST
