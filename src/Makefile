@@ -9,7 +9,7 @@ TOPLEVEL_LANG ?= verilog
 ifneq ($(GATES),yes)
 
 # this is the only part you should need to modify:
-VERILOG_SOURCES += $(PWD)/tb.v $(PWD)/tt_um_ti_sbox.v $(PWD)/sbox_ti.v
+VERILOG_SOURCES += $(PWD)/tb.v $(PWD)/tt_um_ti_sbox.v $(PWD)/sbox_ti.v $(PWD)/SELECT_NOT_8.v $(PWD)/MUX21I.v
 
 else
 
