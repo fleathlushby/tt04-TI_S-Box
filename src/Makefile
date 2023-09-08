@@ -11,8 +11,8 @@ ifneq ($(GATES),yes)
 # this is the only part you should need to modify:
 VERILOG_SOURCES += $(PWD)/tb.v $(PWD)/tt_um_ti_sbox.v $(PWD)/sbox_ti.v $(PWD)/SELECT_NOT_8.v $(PWD)/MUX21I.v,
                    $(PWD)/tb.v $(PWD)/tt_um_ti_sbox.v $(PWD)/sbox_ti.v $(PWD)/GF_INV_8_shared.v $(PWD)/GF_MULS_4_shared.v,
-                   $(PWD)/tb.v $(PWD)/tt_um_ti_sbox.v $(PWD)/sbox_ti.v $(PWD)/GF_INV_8_shared.v $(PWD)/GF_SQ_SCL_4.v $(PWD)/GF_SQ_2.v
-                   $(PWD)/tb.v $(PWD)/tt_um_ti_sbox.v $(PWD)/sbox_ti.v $(PWD)/GF_INV_8_shared.v $(PWD)/GF_SQ_SCL_4.v $(PWD)/GF_SCLW_2.v
+                   $(PWD)/tb.v $(PWD)/tt_um_ti_sbox.v $(PWD)/sbox_ti.v $(PWD)/GF_INV_8_shared.v $(PWD)/GF_SQ_SCL_4.v $(PWD)/GF_SQ_2.v,
+                   $(PWD)/tb.v $(PWD)/tt_um_ti_sbox.v $(PWD)/sbox_ti.v $(PWD)/GF_INV_8_shared.v $(PWD)/GF_SQ_SCL_4.v $(PWD)/GF_SCLW_2.v,
                    $(PWD)/tb.v $(PWD)/tt_um_ti_sbox.v $(PWD)/sbox_ti.v $(PWD)/GF_INV_8_shared.v $(PWD)/GF_INV_4_shared.v
                    
 
