@@ -6,12 +6,20 @@ project:
 # If using an HDL, set wokwi_id as 0 and uncomment and list your source files here. 
 # Source files must be in ./src and you must list each source file separately
   source_files:        
-    - tt_um_parallel_adder.v
-    - fulladder.v
-  top_module:  "tt_um_parallel_adder"      # put the name of your top module here, make it unique by prepending your github username
+    - tt_um_ti_sbox.v
+    - sbox_ti.v
+    - SELECT_NOT_8.v
+    - MUX21I.v
+    - GF_INV_8_shared.v
+    - GF_MULS_4_shared.v
+    - GF_SQ_SCL_4.v
+    - GF_SQ_2.v
+    - GF_SCLW_2.v
+    - GF_INV_4_shared.v
+  top_module:  "tt_um_ti_sbox"      # put the name of your top module here, make it unique by prepending your github username
 
 # How many tiles your design occupies? A single tile is about 167x108 uM.
-  tiles: "1x1"    # Valid values: 1x1, 1x2, 2x2, 4x2 or 8x2
+  tiles: "8x2"    # Valid values: 1x1, 1x2, 2x2, 4x2 or 8x2
 
 # Keep a track of the submission yaml
 yaml_version: 4
