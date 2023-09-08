@@ -22,12 +22,20 @@ async def test_ti_sbox(dut):
     dut._log.info("output ready = {}".format(int(dut.uio_out.value)))
     await ClockCycles(dut.clk, 20)
     dut.ui_in.value = input[1]
+    dut._log.info("output during input buffering = {}".format(int(dut.uo_out.value)))
+    dut._log.info("output ready = {}".format(int(dut.uio_out.value)))
     await ClockCycles(dut.clk, 20)
     dut.ui_in.value = input[2]
+    dut._log.info("output during input buffering = {}".format(int(dut.uo_out.value)))
+    dut._log.info("output ready = {}".format(int(dut.uio_out.value)))
     await ClockCycles(dut.clk, 20)
     dut.ui_in.value = input[3]
+    dut._log.info("output during input buffering = {}".format(int(dut.uo_out.value)))
+    dut._log.info("output ready = {}".format(int(dut.uio_out.value)))
     await ClockCycles(dut.clk, 20)
     dut.ui_in.value = input[4]
+    dut._log.info("output during input buffering = {}".format(int(dut.uo_out.value)))
+    dut._log.info("output ready = {}".format(int(dut.uio_out.value)))
     await ClockCycles(dut.clk, 20)
     dut.ena.value = 0
     dut._log.info("output at ena low = {}".format(int(dut.uo_out.value)))
