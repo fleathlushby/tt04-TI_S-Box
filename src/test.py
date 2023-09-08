@@ -14,7 +14,7 @@ async def test_ti_sbox(dut):
     dut._log.info("reset")
     dut.rst_n.value = 0
     dut.ena.value = 1
-    await ClockCycles(dut.clk, 30)
+    await ClockCycles(dut.clk, 310)
     dut.rst_n.value = 1
     dut.ena.value = 0
     dut._log.info("output at reset low = {}".format(int(dut.uo_out.value)))
