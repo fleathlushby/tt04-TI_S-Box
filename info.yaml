@@ -28,7 +28,15 @@ documentation:
 
 # Longer description of how the project works. You can use standard markdown format.
   how_it_works: |
+      This implementation of the S-Box follows Canright’s tower field approach and contains linear mappings to and from a $GF(2^4)$ normal base, 
+      three instances of $GF(2^4)$ multipliers, one $GF(2^4)$ inverter and one square scaler. 
       
+      In the first phase, three shares are processed by the linear input mapping and
+      afterward fed into a multiplier and a uniform reduction to two shares $(a,b,c)\mapsto(a,b \oplus c)$ is fed into the square scaler. 
+      The output of the multiplier is partially remasked by 8-bits of randomness while the square scaler output is left as is. 
+      The result is saved in a register. In phase two the overall five shares are combined into four shares. Due to the previous remasking, this can be done uniformly as such:
+      
+      $$(x,y,a,b,c)\mapsto(x,y \oplus (r_1 \oplus r_2),a \oplus (b \oplus r_1),c \oplus r_2)$$
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
