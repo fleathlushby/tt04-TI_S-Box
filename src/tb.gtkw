@@ -1,0 +1,24 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Fri Jul 21 10:59:05 2023
+[*]
+[dumpfile] "/home/tishya/Vivado/2018.3/tt04-verilog-demo/tinytapeout_TT04_SEAL/src/tb.vcd"
+[dumpfile_mtime] "Thurs 07/09/2023"
+[dumpfile_size] 4298151
+[savefile] "/home/tishya/Vivado/2018.3/tt04-verilog-demo/tinytapeout_TT04_SEAL/src/tb.gtkw"
+[timestart] 0
+[size] 2286 698
+[pos] -1 -1
+*-33.900002 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb.
+[sst_width] 343
+[signals_width] 414
+[sst_expanded] 1
+[sst_vpaned_height] 190
+@28
+tb.rst_n
+tb.clk
+@22
+tb.uo_out[7:0]
+[pattern_trace] 1
+[pattern_trace] 0
