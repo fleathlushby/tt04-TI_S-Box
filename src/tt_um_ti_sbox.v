@@ -14,8 +14,10 @@ wire reset = ! rst_n;
 wire in_load;
 wire [7:0] in;
 reg out_ready;
+reg [7:0] out;
 assign in_load = ena;
 assign in = ui_in;
+assign uo_out = out;
 assign uio_oe = 8'b11111111;   // use bidirectionals as outputs
 assign uio_out[0] = out_ready;
 assign uio_out[7:1] = 7'b0000000;
@@ -78,14 +80,14 @@ always@(posedge clk)
 always@(posedge clk)
     begin
         if(reset)
-            uo_out<=8'd0;
+            out<=8'd0;
         else if(out_count==2'd1)
-            uo_out<=out1;
+            out<=out1;
         else if(out_count==2'd2)
-            uo_out<=out2;
+            out<=out2;
         else if(out_count==2'd3)
-            uo_out<=out3;
+            out<=out3;
         else
-            uo_out<=uo_out;
+            out<=out;
     end 
 endmodule
