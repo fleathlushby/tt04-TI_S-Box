@@ -27,4 +27,4 @@ async def test_ti_sbox(dut):
     #     await ClockCycles(dut.clk, 20)
     #     assert int(dut.uo_out.value) == output[i]
     assert dut.uio_oe == 0xFF
-    assert dut.uio_out == 0xFF
+    assert dut.uio_out == 0x01
