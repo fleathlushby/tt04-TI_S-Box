@@ -1,5 +1,5 @@
 # tt04-TI_S-Box
-Threshold Implementation of an Advanced Encryption Standard(AES) Substitution Box(S-Box) for Tiny Tapeout-04
+Threshold Implementation based S-Box (Substitution Box) of the AES (Advanced Encryption Standard) submitted for Tiny Tapeout-04
 
 This implementation of the S-Box follows Canright’s tower field approach and contains linear mappings to and from a $GF(2^4)$ normal base, three instances of $GF(2^4)$ multipliers, one $GF(2^4)$ inverter and one square scaler. 
       
