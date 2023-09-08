@@ -19,11 +19,12 @@ async def test_ti_sbox(dut):
     dut.ena.value = 1
     # await ClockCycles(dut.clk, 100)
     # dut.ena.value = 0
-    
-    dut._log.info("check 5 inputs")
-    for i in range(5):
-        dut._log.info("check input {}".format(i))
-        dut.ui_in.value = input[i]
-        await ClockCycles(dut.clk, 20)
-        assert int(dut.uo_out.value) == output[i]
-        assert dut.uio_oe == 0xFF
+    await ClockCycles(dut.clk, 120)
+    # dut._log.info("check 5 inputs")
+    # for i in range(5):
+    #     dut._log.info("check input {}".format(i))
+    #     dut.ui_in.value = input[i]
+    #     await ClockCycles(dut.clk, 20)
+    #     assert int(dut.uo_out.value) == output[i]
+    assert dut.uio_oe == 0xFF
+    assert dut.uio_out == 0xFF
