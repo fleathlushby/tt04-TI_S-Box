@@ -17,8 +17,8 @@ async def test_ti_sbox(dut):
     await ClockCycles(dut.clk, 110)
     dut.rst_n.value = 1
     dut.ena.value = 0
-    await ClockCycles(dut.clk, 100)
-    dut.ena.value = 1
+    # await ClockCycles(dut.clk, 100)
+    # dut.ena.value = 1
     
     dut._log.info("check 5 inputs")
     for i in range(5):
