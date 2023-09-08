@@ -25,7 +25,7 @@ async def test_ti_sbox(dut):
         dut._log.info("check input {}".format(i))
         await ClockCycles(dut.clk, 20)
         dut.ui_in.value = input[i]
-    await ClockCycles(dut.clk, 170)
+    # await ClockCycles(dut.clk, 170)
     for i in range(10):
         dut._log.info("output = {}".format(int(dut.uo_out.value)))
         dut._log.info("output ready = {}".format(int(dut.uio_out.value)))
