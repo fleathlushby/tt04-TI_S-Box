@@ -38,6 +38,16 @@ documentation:
       
       $$(x,y,a,b,c)\mapsto(x,y \oplus (r_1 \oplus r_2),a \oplus (b \oplus r_1),c \oplus r_2)$$
 
+      In the equation $x,y$ denote the square scaler output, while $a,b,c$ denote the multiplier output. Note that a register needs to hold all five shares before recombination as glitches in $a \oplus b$ might reveal secret information. 
+      After recombination, the four shares are fed into the inverter and remasked with 8-bits of randomness. A register stage preventing glitches follows. 
+      In the final stage the remasked outputs are reduced to three shares uniformly by the following function.
+      
+      $$(a,b,c,d)\mapsto(a \oplus (b \oplus r_3),c \oplus r_4,d \oplus r_3 \oplus r_4)$$
+      
+      Subsequently, these shares are fed into two multipliers. Finally, the inverse linear mapping follows. With this new construction, it is enough to have three input shares to the S-box since the multiplier block requires only three shares.
+      We need to reduce the number of shares from five to four at the end of the first phase for the inverter and from four to three at the end of the second phase for the following multipliers.
+
+      
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
       After reset, the counter should increase by one every second with a 10MHz input clock.
