@@ -23,5 +23,5 @@ async def test_ti_sbox(dut):
         dut._log.info("check input {}".format(i))
         await ClockCycles(dut.clk, 20)
         dut.ui_in.value = input[i]
-        # assert int(dut.uo_out.value) == output[i]
+        assert int(dut.uo_out.value) == output[i]
         assert dut.uio_oe == 0xFF
